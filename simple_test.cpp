@@ -26,12 +26,6 @@ int main() {
     */
     std::thread t(compute, std::ref(x), std::ref(y), &result);
 
-    /**
-     * The code below can be executed even if the thread has not completed its task (compute function).
-     * 
-     * This is the asynchronous concept.
-     * It means, threads run independently. So they don't block execution of the main program.
-    */
     std::cout << "Computing..." << std::endl;
 
     // wait for the thread to complete its task (compute function).
