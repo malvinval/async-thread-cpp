@@ -6,3 +6,7 @@
 ## ```std::async()```
 - ```std::async()``` is a C++ Standard Library function that allows you to launch a function asynchronously in a separate thread.
 - ```std::launch::async``` is a policy that can be used optionally as the first argument of ```std::async()``` to specify the function passed to it should be executed asynchronously.
+
+## Important note
+
+```std::async()``` always returns a ```std::future ``` object that represents the result of the asynchronous task. Therefore, you cannot use ```std::async()``` without a future.
